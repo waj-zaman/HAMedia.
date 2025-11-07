@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+/* fonts */
+.body .subheading{
+  font-family: "Public Sans", sans-serif;
+}
+
+.heading{
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.title {
+  font-family: "BBH Sans Hegarty", sans-serif;
+  display: inline-block;        /* ensures transform applies properly */
+  transform: scaleY(0.5);      /* compress vertically — 0.5 is too flat */
+  transform-origin: center;     /* keeps the text evenly squished */
+  line-height: 1;               /* tightens vertical spacing */
+  letter-spacing: 0.02em;       /* optional: improves readability slightly */
+}
+
+
+/* colours */
+
+.black{
+  color: #0C0C0C;
+}
+
+.offwhite{
+  color: #FAF3E0;
+}
+
+.gold{
+  color: #C6A664;
+}
+
+.gray{
+  color: #1E1E1E;
+}
+
+.light{
+  color: #7E7462;
+}
