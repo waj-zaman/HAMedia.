@@ -20,6 +20,12 @@ const HomePage = () => {
         <Hero />
         <About />
         <Services />
+        <Advantages />
+        <Portfolio />
+        <FAQ />
+        <Reviews />
+        <Contact />
+        <Footer />
     </div>
   )
 }

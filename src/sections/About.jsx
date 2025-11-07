@@ -53,7 +53,7 @@ const Section = () => {
             </li>
           </ul>
 
-          <button className="heading bg-[#F42F05] offwhite px-4 py-2 rounded-lg shadow-md heading font-bold text-md transition duration-200">
+          <button className="heading bg-[#F42F05] offwhite px-4 py-2 rounded-lg shadow-md heading font-bold text-md transform hover:scale-105 transition duration-200">
             Contact Us <span className="text-xl">➜</span>
           </button>
         </div>
