@@ -1,24 +1,37 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FaGlobe } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
 
 const Portfolio = () => {
   return (
-    <section className="bg-[#6B5F52] py-16 md:py-20 px-4 md:px-6 text-center">
+    <section className="bg-[#6B5F52] py-16 md:py-20 px-4 md:px-6 text-center overflow-hidden">
       {/* Section Heading */}
-      <div className="flex flex-col items-center pb-8 md:pb-10">
+      <motion.div
+        className="flex flex-col items-center pb-8 md:pb-10"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
         <p className="body text-sm gold font-semibold mb-1 md:mb-2">
           Our Portfolio
         </p>
         <h2 className="heading text-2xl md:text-3xl font-bold offwhite mb-8 md:mb-10">
           See What We've Built
         </h2>
-      </div>
+      </motion.div>
 
       {/* Portfolio Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 max-w-6xl mx-auto">
         {/* Card 1 */}
-        <div className="group relative bg-[#F8F6F3] rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <motion.div
+          className="group relative bg-[#F8F6F3] rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
+          initial={{ opacity: 0, x: -80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
           <div className="overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=60"
@@ -48,10 +61,16 @@ const Portfolio = () => {
               and group-friendly amenities.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Card 2 */}
-        <div className="group relative bg-[#F8F6F3] rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <motion.div
+          className="group relative bg-[#F8F6F3] rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
           <div className="overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=60"
@@ -81,15 +100,21 @@ const Portfolio = () => {
               celebrations.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Button */}
-      <div className="mt-10 md:mt-14">
+      <motion.div
+        className="mt-10 md:mt-14"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
         <button className="heading bg-[#FF4C1E] hover:bg-[#e04318] text-white font-semibold py-2.5 md:py-3 px-6 md:px-8 rounded-lg flex items-center justify-center gap-2 mx-auto transform hover:scale-110 transition-all duration-300 shadow-md hover:shadow-xl">
           View Portfolio <FiArrowRight className="text-lg" />
         </button>
-      </div>
+      </motion.div>
     </section>
   );
 };
