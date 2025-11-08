@@ -1,15 +1,25 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import HomePage from "./Pages/HomePage";
-
+import PortfolioPage from "./Pages/PortfolioPage";
+import NotFoundPage from "./Pages/NotFoundPage";
 
 function App() {
-
   return (
-    <>
-      <HomePage />
-    </>
-  )
+    <Router>
+      <Routes>
+        {/* 🏠 Home Page */}
+        <Route path="/" element={<HomePage />} />
+
+        {/* 📖 Portfolio Page */}
+        <Route path="/portfolio" element={<PortfolioPage />} />
+
+        {/* ❌ 404 Fallback */}
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
