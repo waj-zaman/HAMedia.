@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Menu, X } from "lucide-react"; // Lightweight icons (install with: npm i lucide-react)
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
@@ -15,29 +15,30 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-black backdrop-blur-md border-b border-[#1b1b1b]">
-      <div className="max-w-[1300px] mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="max-w-[1300px] mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <a 
-        href="/"
-        style={{fontFamily: "'BBH Sans Hegarty', sans-serif"}} 
-        className="offwhite">
+        <a
+          href="/"
+          style={{ fontFamily: "'BBH Sans Hegarty', sans-serif" }}
+          className="offwhite text-lg sm:text-xl"
+        >
           HAMedia.
         </a>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6 lg:gap-8">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-[#FAF3E0] heading transition-all duration-200  hover:text-[#D4AF37]"
+              className="text-[#FAF3E0] heading transition-all duration-200 hover:text-[#D4AF37] text-sm lg:text-base"
             >
               {link.name}
             </a>
           ))}
           <a
             href="/contact"
-            className="ml-4 px-4 py-2 bg-[#D4AF37] text-black font-medium rounded-lg hover:bg-[#E0C35A] transition-all duration-200"
+            className="ml-4 px-4 py-2 bg-[#D4AF37] text-black font-medium rounded-lg hover:bg-[#E0C35A] transition-all duration-200 text-sm lg:text-base"
           >
             Let’s Talk
           </a>
@@ -59,14 +60,14 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden bg-[#0E0E0E] border-t border-[#1b1b1b]"
+            className="md:hidden bg-[#0E0E0E] border-t border-[#1b1b1b] w-full"
           >
-            <div className="flex flex-col items-center gap-4 py-6">
+            <div className="flex flex-col items-center gap-4 py-6 px-4">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-gray-200 hover:text-[#D4AF37] transition-colors duration-200 text-lg"
+                  className="text-gray-200 hover:text-[#D4AF37] transition-colors duration-200 text-lg w-full text-center"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
@@ -74,7 +75,7 @@ const Navbar = () => {
               ))}
               <a
                 href="/contact"
-                className="mt-2 px-4 py-2 bg-[#D4AF37] text-black font-medium rounded-lg hover:bg-[#E0C35A] transition-all duration-200"
+                className="mt-2 px-6 py-2 bg-[#D4AF37] text-black font-medium rounded-lg hover:bg-[#E0C35A] transition-all duration-200"
                 onClick={() => setIsOpen(false)}
               >
                 Let’s Talk

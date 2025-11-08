@@ -4,33 +4,33 @@ import { FiArrowRight } from "react-icons/fi";
 
 const Portfolio = () => {
   return (
-    <section className="bg-[#6B5F52] py-20 px-6 text-center">
+    <section className="bg-[#6B5F52] py-16 md:py-20 px-4 md:px-6 text-center">
       {/* Section Heading */}
-      <div className="flex flex-col items-center pb-10">
-          <p className="body text-sm gold font-semibold">
-            Our Portfolio
-          </p>
-          <h2 className="heading text-2xl md:text-3xl font-bold offwhite mb-10">
-            See What We've Built
-          </h2>
-        </div>
+      <div className="flex flex-col items-center pb-8 md:pb-10">
+        <p className="body text-sm gold font-semibold mb-1 md:mb-2">
+          Our Portfolio
+        </p>
+        <h2 className="heading text-2xl md:text-3xl font-bold offwhite mb-8 md:mb-10">
+          See What We've Built
+        </h2>
+      </div>
 
       {/* Portfolio Cards */}
-      <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 max-w-6xl mx-auto">
         {/* Card 1 */}
         <div className="group relative bg-[#F8F6F3] rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
           <div className="overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=60"
               alt="SZR Farms"
-              className="w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-500"
+              className="w-full h-48 sm:h-56 object-cover transform group-hover:scale-110 transition-transform duration-500"
             />
           </div>
-          <div className="p-8 text-left">
-            <h3 className="heading text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#FF4C1E] transition-colors duration-300">
+          <div className="p-6 md:p-8 text-left">
+            <h3 className="heading text-lg md:text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#FF4C1E] transition-colors duration-300">
               SZR Farms
             </h3>
-            <div className="flex items-center gap-2 text-[#3b5998] font-medium mb-4 hover:scale-105 transition-all duration-200">
+            <div className="flex flex-wrap items-center gap-2 text-[#3b5998] font-medium mb-4 hover:scale-105 transition-all duration-200">
               <FaGlobe className="text-xl" />
               <a
                 href="https://szrfarms.netlify.app"
@@ -45,8 +45,7 @@ const Portfolio = () => {
               SZR Farms is a rental farmhouse located beside Little Star High
               School in Moinabad, Hyderabad. Guests highlight its excellent
               accessibility, large and clean rooms, a spacious swimming pool,
-              and group-friendly amenities, making it a desirable leisure stay
-              for families and groups.
+              and group-friendly amenities.
             </p>
           </div>
         </div>
@@ -57,14 +56,14 @@ const Portfolio = () => {
             <img
               src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=60"
               alt="Zuza Farm House"
-              className="w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-500"
+              className="w-full h-48 sm:h-56 object-cover transform group-hover:scale-110 transition-transform duration-500"
             />
           </div>
-          <div className="p-8 text-left">
-            <h3 className="heading text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#FF4C1E] transition-colors duration-300">
+          <div className="p-6 md:p-8 text-left">
+            <h3 className="heading text-lg md:text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#FF4C1E] transition-colors duration-300">
               Zuza Farm House
             </h3>
-            <div className="flex items-center gap-2 text-[#3b5998] font-medium mb-4 hover:scale-105 transition-all duration-200">
+            <div className="flex flex-wrap items-center gap-2 text-[#3b5998] font-medium mb-4 hover:scale-105 transition-all duration-200">
               <FaGlobe className="text-xl" />
               <a
                 href="https://zuzafarmhouse.netlify.app"
@@ -86,8 +85,8 @@ const Portfolio = () => {
       </div>
 
       {/* Button */}
-      <div className="mt-14">
-        <button className="heading bg-[#FF4C1E] hover:bg-[#e04318] text-white font-semibold py-3 px-8 rounded-lg flex items-center justify-center gap-2 mx-auto transform hover:scale-110 transition-all duration-300 shadow-md hover:shadow-xl">
+      <div className="mt-10 md:mt-14">
+        <button className="heading bg-[#FF4C1E] hover:bg-[#e04318] text-white font-semibold py-2.5 md:py-3 px-6 md:px-8 rounded-lg flex items-center justify-center gap-2 mx-auto transform hover:scale-110 transition-all duration-300 shadow-md hover:shadow-xl">
           View Portfolio <FiArrowRight className="text-lg" />
         </button>
       </div>
