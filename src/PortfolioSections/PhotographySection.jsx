@@ -12,7 +12,7 @@ const PhotographySection = () => {
     <MajesticExteriors />
 
     <motion.h2
-                className="heading text-base sm:text-xl md:text-2xl font-bold text-gray-800 leading-snug pt-20 max-w-[800px] mx-auto text-center px-4"
+                className="heading text-base sm:text-xl md:text-2xl font-bold text-gray-800 leading-snug max-w-[800px] mx-auto text-center px-4"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}

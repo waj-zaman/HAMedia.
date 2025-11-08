@@ -4,7 +4,7 @@ import { FaGlobe } from "react-icons/fa";
 
 const WebDesign = () => {
     return (
-        <section className="py-16 md:py-24 px-4 text-center">
+        <section className=" md:py-16 px-4 text-center">
 
             {/* Grid of Projects */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 max-w-6xl mx-auto">

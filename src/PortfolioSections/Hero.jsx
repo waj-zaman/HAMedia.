@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-center min-h-[75vh] mt-[50px] px-6 bg-gradient-to-b from-[#1a1a1a] to-[#000000] overflow-hidden">
+    <section className="relative flex flex-col md:flex-row items-center justify-center min-h-[50vh] mt-[50px] px-6 bg-gradient-to-b from-[#1a1a1a] to-[#000000] overflow-hidden">
       
       {/* 🌓 Optional soft overlay for depth */}
       <div className="absolute inset-0 bg-black/40"></div>

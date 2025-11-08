@@ -16,7 +16,7 @@ const MajesticInteriors = () => {
   ];
 
   return (
-    <section className="=px-6 sm:px-10 md:px-20 py-16">
+    <section className="=px-6 sm:px-10 md:px-20 py-8">
       {/* Title */}
       <motion.h2
         className="heading text-2xl sm:text-3xl font-semibold text-gray-900 mb-10 text-center md:text-left"
