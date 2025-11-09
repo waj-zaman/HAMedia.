@@ -4,19 +4,20 @@ import { motion } from "framer-motion";
 const MajesticInteriors = () => {
   const images = [
     // First 2 images (hero row)
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=60",
-    "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=60",
+    "/assets/interiors/_GGN6196.avif",
+    "/assets/interiors/_GGN6171.avif",
 
     // Remaining images (3x grid)
-    "https://images.unsplash.com/photo-1600585154154-1c469b272d5d?auto=format&fit=crop&w=900&q=60",
-    "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=60",
-    "https://images.unsplash.com/photo-1600585154511-8e8d3b5c2a4e?auto=format&fit=crop&w=900&q=60",
-    "https://images.unsplash.com/photo-1600585154309-1e4b3b2a6b94?auto=format&fit=crop&w=900&q=60",
-    "https://images.unsplash.com/photo-1600585154353-f2a3fdf3bc7a?auto=format&fit=crop&w=900&q=60",
+    "/assets/interiors/_GGN6176.avif",
+    "/assets/interiors/_GGN6533.avif",
+    "/assets/interiors/_GGN6185.avif",
+    "/assets/interiors/_GGN6516.avif",
+    "/assets/interiors/_GGN6241.avif",
+    "/assets/interiors/_GGN6501.avif",
   ];
 
   return (
-    <section className="=px-6 sm:px-10 md:px-20 py-8">
+    <section className="px-6 sm:px-10 md:px-20 py-8">
       {/* Title */}
       <motion.h2
         className="heading text-2xl sm:text-3xl font-semibold text-gray-900 mb-10 text-center md:text-left"
@@ -33,7 +34,7 @@ const MajesticInteriors = () => {
         {images.slice(0, 2).map((src, i) => (
           <motion.div
             key={i}
-            className="rounded-xl overflow-hidden shadow-lg bg-white"
+            className="rounded-xl overflow-hidden bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-out"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
@@ -42,7 +43,7 @@ const MajesticInteriors = () => {
             <img
               src={src}
               alt={`Interior ${i + 1}`}
-              className="w-full h-72 sm:h-80 object-cover"
+              className="w-full h-72 sm:h-80 object-cover transform hover:scale-[1.02] transition-transform duration-500 ease-out"
             />
           </motion.div>
         ))}
@@ -53,7 +54,7 @@ const MajesticInteriors = () => {
         {images.slice(2).map((src, i) => (
           <motion.div
             key={i}
-            className="rounded-xl overflow-hidden shadow-lg bg-white"
+            className="rounded-xl overflow-hidden bg-white shadow-xl hover:shadow-2xl transition-shadow duration-500 ease-out"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
@@ -62,7 +63,7 @@ const MajesticInteriors = () => {
             <img
               src={src}
               alt={`Interior ${i + 3}`}
-              className="w-full h-64 sm:h-72 object-cover"
+              className="w-full h-64 sm:h-72 object-cover transform hover:scale-[1.02] transition-transform duration-500 ease-out"
             />
           </motion.div>
         ))}

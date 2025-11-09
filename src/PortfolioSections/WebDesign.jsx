@@ -18,7 +18,7 @@ const WebDesign = () => {
                 >
                     <div className="overflow-hidden">
                         <img
-                            src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=60"
+                            src="../assets/exteriors/_GGN6471.avif"
                             alt="SZR Farms"
                             className="w-full h-48 sm:h-56 object-cover transform group-hover:scale-110 transition-transform duration-500"
                         />
@@ -57,7 +57,7 @@ const WebDesign = () => {
                 >
                     <div className="overflow-hidden">
                         <img
-                            src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=60"
+                            src="../assets/exteriors/_GGN6121.avif"
                             alt="Zuza Farm House"
                             className="w-full h-48 sm:h-56 object-cover transform group-hover:scale-110 transition-transform duration-500"
                         />

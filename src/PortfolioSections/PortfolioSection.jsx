@@ -31,7 +31,7 @@ const PortfolioSection = () => {
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.25 }}
                 >
-                    <p className="body text-xs sm:text-sm text-yellow-700 font-semibold">
+                    <p className="body text-xs sm:text-sm gold font-semibold">
                         Every detail crafted by us — except the client’s touch
                     </p>
                     <h2 className="heading text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 leading-snug">

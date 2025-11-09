@@ -3,13 +3,13 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 import MajesticInteriors from './Interiors'
-import MajesticExteriors from './Exteriors'
+import DistinctiveExteriors from './Exteriors'
 
 const PhotographySection = () => {
   return (
     <>
     <MajesticInteriors /> 
-    <MajesticExteriors />
+    <DistinctiveExteriors />
 
     <motion.h2
                 className="heading text-base sm:text-xl md:text-2xl font-bold text-gray-800 leading-snug max-w-[800px] mx-auto text-center px-4"
