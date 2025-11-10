@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import PortfolioPage from "./Pages/PortfolioPage";
 import NotFoundPage from "./Pages/NotFoundPage";
+import ContactPage from "./Pages/ContactPage";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
 
         {/* ❌ 404 Fallback */}
         <Route path="*" element={<NotFoundPage />} />
+
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </Router>
   );

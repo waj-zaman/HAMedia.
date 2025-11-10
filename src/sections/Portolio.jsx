@@ -3,9 +3,14 @@ import { motion } from "framer-motion";
 import { FaGlobe } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
 
+import { useNavigate } from "react-router-dom";
+
 const Portfolio = () => {
+
+  const navigate = useNavigate(); 
+
   return (
-    <section className="bg-[#6B5F52] py-16 md:py-20 px-4 md:px-6 text-center overflow-hidden">
+    <section id="portfolio" className="bg-[#6B5F52] py-16 md:py-20 px-4 md:px-6 text-center overflow-hidden">
       {/* Section Heading */}
       <motion.div
         className="flex flex-col items-center pb-8 md:pb-10"
@@ -34,7 +39,7 @@ const Portfolio = () => {
         >
           <div className="overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=60"
+              src="../assets/exteriors/_GGN6471.avif"
               alt="SZR Farms"
               className="w-full h-48 sm:h-56 object-cover transform group-hover:scale-110 transition-transform duration-500"
             />
@@ -73,7 +78,7 @@ const Portfolio = () => {
         >
           <div className="overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=60"
+              src="../assets/exteriors/_GGN6121.avif"
               alt="Zuza Farm House"
               className="w-full h-48 sm:h-56 object-cover transform group-hover:scale-110 transition-transform duration-500"
             />
@@ -110,6 +115,7 @@ const Portfolio = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
+        onClick={() => navigate("/portfolio")}
       >
         <button className="heading bg-[#FF4C1E] hover:bg-[#e04318] text-white font-semibold py-2.5 md:py-3 px-6 md:px-8 rounded-lg flex items-center justify-center gap-2 mx-auto transform hover:scale-110 transition-all duration-300 shadow-md hover:shadow-xl">
           View Portfolio <FiArrowRight className="text-lg" />

@@ -29,7 +29,7 @@ const ServicesSection = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-[#F5EBD1] to-[#f8f5ec] flex justify-center py-16 sm:py-20 px-4 sm:px-6 overflow-hidden">
+    <section id="services" className="bg-gradient-to-b from-[#F5EBD1] to-[#f8f5ec] flex justify-center py-16 sm:py-20 px-4 sm:px-6 overflow-hidden">
       <div className="w-full max-w-[1300px] text-gray-900">
         
         {/* HEADER */}
@@ -89,10 +89,10 @@ const ServicesSection = () => {
               ].map((item, index) => (
                 <motion.li
                   key={index}
-                  className="body flex items-start gap-3 group transition-all duration-200"
+                  className="body flex items-center gap-3 group transition-all duration-200"
                   variants={listItemVariants}
                 >
-                  <Check className="text-green-600 mt-1 w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform duration-200" />
+                  <Check className="text-orange-600 w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform duration-200" />
                   <span className="group-hover:text-gray-900 transition-colors duration-200">
                     {item}
                   </span>
@@ -134,10 +134,10 @@ const ServicesSection = () => {
               ].map((item, index) => (
                 <motion.li
                   key={index}
-                  className="body flex items-start gap-3 group transition-all duration-200"
+                  className="body flex items-center gap-3 group transition-all duration-200"
                   variants={listItemVariants}
                 >
-                  <Check className="text-green-600 mt-1 w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform duration-200" />
+                  <Check className="text-orange-600 w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform duration-200" />
                   <span className="group-hover:text-gray-900 transition-colors duration-200">
                     {item}
                   </span>

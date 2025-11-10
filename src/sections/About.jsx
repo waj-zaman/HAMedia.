@@ -1,10 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Section = () => {
+  const navigate = useNavigate();
+
   return (
-    <section className="bg-[#FAF3E0] flex justify-center py-16 px-4 sm:px-6">
+    <section id="about" className="bg-[#FAF3E0] flex justify-center py-16 px-4 sm:px-6">
       <div className="w-full max-w-[1300px] flex flex-col md:flex-row items-center justify-between px-4 sm:px-10 md:px-20 py-8 md:py-12 gap-12">
 
         {/* LEFT TEXT SECTION */}
@@ -37,22 +40,22 @@ const Section = () => {
           </p>
 
           <ul className="space-y-2 mb-8 text-left">
-            <li className="flex items-start gap-3">
-              <Check className="text-green-600 mt-1 w-5 h-5 flex-shrink-0" />
+            <li className="flex items-center gap-3">
+              <Check className="text-orange-600 mt-1 w-5 h-5 flex-shrink-0" />
               <span className="text-gray-700">
                 <strong>Real Results –</strong> We focus on what moves the
                 needle, not just what looks good.
               </span>
             </li>
             <li className="flex items-start gap-3">
-              <Check className="text-green-600 mt-1 w-5 h-5 flex-shrink-0" />
+              <Check className="text-orange-600 w-5 h-5 flex-shrink-0" />
               <span className="text-gray-700">
                 <strong>Trust And Clarity –</strong> We keep communication
                 honest, simple and fast.
               </span>
             </li>
             <li className="flex items-start gap-3">
-              <Check className="text-green-600 mt-1 w-5 h-5 flex-shrink-0" />
+              <Check className="text-orange-600 mt-1 w-5 h-5 flex-shrink-0" />
               <span className="text-gray-700">
                 <strong>Smart Systems –</strong> We build solutions that scale
                 with your business.
@@ -60,7 +63,7 @@ const Section = () => {
             </li>
           </ul>
 
-          <button className="heading bg-[#F42F05] offwhite px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg shadow-md heading font-bold text-md sm:text-lg transform hover:scale-105 transition duration-200">
+          <button className="heading bg-[#F42F05] offwhite px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg shadow-md heading font-bold text-md sm:text-lg transform hover:scale-105 transition duration-200" onClick={() => navigate("/contact")}>
             Contact Us <span className="text-xl">➜</span>
           </button>
         </motion.div>

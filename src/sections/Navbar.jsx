@@ -7,11 +7,23 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Portfolio", href: "/portfolio" },
-    { name: "Services", href: "/services" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "Portfolio", href: "#portfolio" },
+    { name: "Services", href: "#services" },
+    { name: "About", href: "#about" },
+    { name: "Contact", href: "#contact" },
   ];
+
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const yOffset = -30; // Adjust this value according to your navbar height
+      const y =
+        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+      setIsOpen(false); // close mobile menu
+    }
+  };
+
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-black backdrop-blur-md border-b border-[#1b1b1b]">
@@ -28,13 +40,19 @@ const Navbar = () => {
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-6 lg:gap-8">
           {navLinks.map((link) => (
-            <a
+            <button
               key={link.name}
-              href={link.href}
               className="text-[#FAF3E0] heading transition-all duration-200 hover:text-[#D4AF37] text-sm lg:text-base"
+              onClick={() => {
+                if (link.href.startsWith("#")) {
+                  handleScroll(link.href.substring(1));
+                } else {
+                  window.location.href = link.href;
+                }
+              }}
             >
               {link.name}
-            </a>
+            </button>
           ))}
           <a
             href="/contact"
@@ -64,14 +82,19 @@ const Navbar = () => {
           >
             <div className="flex flex-col items-center gap-4 py-6 px-4">
               {navLinks.map((link) => (
-                <a
+                <button
                   key={link.name}
-                  href={link.href}
                   className="text-gray-200 hover:text-[#D4AF37] transition-colors duration-200 text-lg w-full text-center"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    if (link.href.startsWith("#")) {
+                      handleScroll(link.href.substring(1));
+                    } else {
+                      window.location.href = link.href;
+                    }
+                  }}
                 >
                   {link.name}
-                </a>
+                </button>
               ))}
               <a
                 href="/contact"

@@ -4,7 +4,7 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const ContactUs = () => {
   return (
-    <section className="bg-[#f8f0dc] py-16 md:py-24 px-4 md:px-10 flex justify-center overflow-hidden">
+    <section id="contact" className="bg-[#f8f0dc] py-16 md:py-24 px-4 md:px-10 flex justify-center overflow-hidden">
       <div className="w-full max-w-[1200px]">
         {/* Heading */}
         <motion.div
@@ -14,7 +14,7 @@ const ContactUs = () => {
           transition={{ duration: 0.7, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <p className="body text-sm text-yellow-700 font-semibold">
+          <p className="body text-sm gold font-semibold">
             Get in Touch
           </p>
           <h2 className="heading text-2xl md:text-3xl font-bold text-gray-800 mb-6">
