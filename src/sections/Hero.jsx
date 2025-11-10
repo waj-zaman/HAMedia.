@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
   const [videoSrc, setVideoSrc] = useState(
-    "/videos/Screen Recording 2025-11-07 124148.mp4"
+    "/videos/Untitled Design.mp4"
   );
 
   const navigate = useNavigate();
@@ -13,8 +13,8 @@ const HeroSection = () => {
     if (typeof window === "undefined") return;
 
     // Define both video versions
-    const mobileVideo = "/videos/14144344-hd_1080_1906_60fps.mp4";   // 👈 replace with your mobile-optimized video
-    const desktopVideo = "/videos/Screen Recording 2025-11-07 124148.mp4";
+    const mobileVideo = "/videos/Untitled Design (1).mp4";   // 👈 replace with your mobile-optimized video
+    const desktopVideo = "/videos/Untitled Design.mp4";
 
     const mq = window.matchMedia("(max-width: 768px)");
 
@@ -39,7 +39,7 @@ const HeroSection = () => {
         muted
         playsInline
         preload="metadata"
-        className="absolute top-0 left-0 w-full h-full object-cover opacity-20"
+        className="absolute top-0 left-0 w-full h-full object-cover opacity-40"
       >
         <source src={videoSrc} type="video/mp4" />
         Your browser does not support the video tag.

@@ -1,7 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+
+  const navigate = useNavigate()
+  
   return (
     <section className="relative flex flex-col md:flex-row items-center justify-center min-h-[60vh] mt-[60px] px-6 sm:px-10 md:px-20 bg-gradient-to-b from-[#1a1a1a] to-[#000000] overflow-hidden">
       {/* Soft Overlay for Depth */}
@@ -40,6 +44,7 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
+            onClick={() => navigate("/contact")}
             className="mt-3 bg-[#F42F05] offwhite px-6 py-3 rounded-lg shadow-md heading font-bold text-lg sm:text-xl transition-transform duration-300 hover:scale-105"
           >
             Let's Talk
@@ -54,7 +59,7 @@ const HeroSection = () => {
           transition={{ delay: 0.3, duration: 0.7 }}
         >
           <img
-            src="/assets/interiors/_GGN6171.avif"
+            src="/imagery/pexels-fauxels-3184454.jpg"
             alt="Portfolio showcase"
             className="rounded-2xl w-full sm:w-4/5 md:w-full max-w-[500px] object-cover shadow-lg"
           />

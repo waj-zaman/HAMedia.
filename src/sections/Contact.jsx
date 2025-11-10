@@ -69,7 +69,7 @@ const ContactUs = () => {
                   Phone
                 </h4>
                 <p className="body text-gray-700 leading-relaxed">
-                  +91 98765 43210
+                  +91 96400 26851
                 </p>
               </div>
             </div>

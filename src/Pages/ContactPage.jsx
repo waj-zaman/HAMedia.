@@ -42,14 +42,17 @@ const ContactPage = () => {
                 <div className="absolute inset-0 bg-black/40"></div>
                 <div className="relative z-10 w-full max-w-[1300px] flex flex-col md:flex-row items-center justify-between gap-10">
                     <div className="w-full md:w-1/2 text-center md:text-left">
-                        <motion.h1
-                            className="gold mb-6 text-4xl sm:text-5xl md:text-6xl leading-tight"
-                            initial={{ opacity: 0, y: 40 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6 }}
-                        >
-                            Contact Us
-                        </motion.h1>
+                        <div className="title">
+                            <motion.h1
+                                className="gold mb-6 text-4xl sm:text-5xl md:text-6xl leading-tight"
+                                initial={{ opacity: 0, y: 40 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6 }}
+                            >
+                                Contact Us
+                            </motion.h1>
+                        </div>
+
 
                         <motion.p
                             className="heading text-base sm:text-lg md:text-2xl mb-6 sm:mb-8 mx-auto md:mx-0 offwhite max-w-xl"
@@ -68,7 +71,7 @@ const ContactPage = () => {
                         transition={{ delay: 0.3, duration: 0.7 }}
                     >
                         <img
-                            src="/assets/interiors/_GGN6171.avif"
+                            src="/imagery/pexels-nietjuhart-796602.jpg"
                             alt="Portfolio showcase"
                             className="rounded-2xl w-full sm:w-4/5 md:w-full max-w-[500px] object-cover shadow-lg"
                         />
@@ -81,7 +84,6 @@ const ContactPage = () => {
                 initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: true }}
                 className="relative text-gray-300 py-16 px-6 sm:px-10 md:px-20 bg-gradient-to-b from-[#fdf7e3] to-[#f8f0dc]"
             >
                 <div className="max-w-[1200px] mx-auto p-6 sm:p-10 md:p-12 bg-[#f7e9cd] rounded-3xl shadow-2xl overflow-hidden">
@@ -104,14 +106,59 @@ const ContactPage = () => {
                             initial={{ opacity: 0, x: -40 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.2, duration: 0.6 }}
-                            className="w-full md:w-1/2"
+                            className="w-full md:w-1/2 flex justify-center items-center relative"
                         >
-                            <img
-                                src="/assets/interiors/_GGN6501.avif"
-                                alt="Contact visual"
-                                className="rounded-2xl shadow-lg w-full object-cover hover:scale-[1.02] transition-transform duration-500"
-                            />
+                            <motion.div
+                                className="w-full h-[320px] sm:h-[380px] md:h-[420px] bg-gradient-to-br from-[#FFF6EE] to-[#FFE8D6] rounded-2xl shadow-lg flex items-center justify-center overflow-hidden relative"
+                                initial={{ scale: 0.95 }}
+                                whileInView={{ scale: 1 }}
+                                transition={{ duration: 0.8, ease: 'easeOut' }}
+                            >
+                                {/* SVG Abstract Lines */}
+                                <svg
+                                    viewBox="0 0 400 400"
+                                    className="absolute w-[110%] h-[110%] opacity-70"
+                                >
+                                    <motion.path
+                                        d="M0,200 Q200,100 400,200 T800,200"
+                                        fill="transparent"
+                                        stroke="#F42F05"
+                                        strokeWidth="2"
+                                        initial={{ pathLength: 0 }}
+                                        animate={{ pathLength: 1 }}
+                                        transition={{ duration: 2, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" }}
+                                    />
+                                    <motion.path
+                                        d="M0,250 Q200,150 400,250 T800,250"
+                                        fill="transparent"
+                                        stroke="#FF8A65"
+                                        strokeWidth="1.5"
+                                        initial={{ pathLength: 0 }}
+                                        animate={{ pathLength: 1 }}
+                                        transition={{ duration: 3, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" }}
+                                    />
+                                </svg>
+
+                                {/* Floating Contact Symbol */}
+                                <motion.div
+                                    initial={{ y: 10 }}
+                                    animate={{ y: -10 }}
+                                    transition={{ duration: 2, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+                                    className="flex flex-col items-center text-center z-10"
+                                >
+                                    <div className="w-20 h-20 rounded-full bg-[#F42F05]/10 flex items-center justify-center mb-3">
+                                        <img src="/gmail (1).png" alt="Message Icon" className="w-10 h-10" />
+                                    </div>
+                                    <p className="heading text-lg md:text-xl font-semibold text-gray-700">
+                                        Let’s build something great
+                                    </p>
+                                    <p className="body text-sm text-gray-500 mt-1">
+                                        Send your ideas, we’ll make them real.
+                                    </p>
+                                </motion.div>
+                            </motion.div>
                         </motion.div>
+
 
 
                         {/* Right Side Form */}
@@ -159,10 +206,10 @@ const ContactPage = () => {
                                         : {}
                                 }
                                 className={`mt-3 ${status === "error"
-                                        ? "bg-red-500"
-                                        : status === "success"
-                                            ? "bg-green-500"
-                                            : "bg-orange-500"
+                                    ? "bg-red-500"
+                                    : status === "success"
+                                        ? "bg-green-500"
+                                        : "bg-orange-500"
                                     } offwhite px-6 py-3 rounded-lg shadow-md heading font-bold text-lg sm:text-xl transition-transform duration-300`}
                             >
                                 {status === "sending"

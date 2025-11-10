@@ -69,44 +69,54 @@ const Section = () => {
         </motion.div>
 
         {/* RIGHT GEOMETRIC BOXES */}
+        {/* RIGHT IMAGE GRID */}
         <motion.div
           className="w-full md:w-2/5 flex justify-center relative"
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.9, ease: "easeOut" }}
+          transition={{ duration: 0.9, ease: 'easeOut' }}
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.div
-            className="grid grid-cols-2 gap-6 sm:gap-8 scale-90 sm:scale-100"
+            className="grid grid-cols-2 gap-4 sm:gap-6"
             initial="hidden"
             whileInView="visible"
             variants={{
               hidden: {},
-              visible: {
-                transition: { staggerChildren: 0.2 },
-              },
+              visible: { transition: { staggerChildren: 0.2 } },
             }}
             viewport={{ once: true }}
           >
-            {[0, 1, 2].map((i) => (
+            {[
+              { src: "/imagery/pexels-vladbagacian-3987066.jpg", alt: "Web Developer at Work" },
+              { src: "/imagery/pexels-olia-danilevich-4974922.jpg", alt: "Photographer Editing" },
+              { src: "/imagery/pexels-fauxels-3183197.jpg", alt: "Creative Team Collaboration" },
+            ].map((img, i) => (
               <motion.div
                 key={i}
                 variants={{
                   hidden: { opacity: 0, y: 30 },
                   visible: { opacity: 1, y: 0 },
                 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                className={`border-2 border-gray-300 rounded-lg shadow-sm ${
-                  i === 0
-                    ? "w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40"
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+                className={`overflow-hidden rounded-2xl shadow-md border border-gray-200 ${i === 0
+                    ? 'col-span-1 row-span-1 w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44'
                     : i === 1
-                    ? "w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 translate-y-10 sm:translate-y-16 md:translate-y-20"
-                    : "w-40 h-28 sm:w-60 sm:h-36 md:w-72 md:h-40 col-span-2 translate-x-6 sm:translate-x-12 md:translate-x-20"
-                }`}
-              />
+                      ? 'col-span-1 row-span-1 w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 translate-y-8'
+                      : 'col-span-2 row-span-1 w-full h-40 sm:h-52 md:h-56 mt-6'
+                  }`}
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500 ease-out"
+                />
+              </motion.div>
             ))}
           </motion.div>
         </motion.div>
+
+
       </div>
     </section>
   );

@@ -23,7 +23,7 @@ const HomePage = () => {
         <Advantages />
         <Portfolio />
         <FAQ />
-        <Reviews />
+        {/* <Reviews /> */}
         <Contact />
         <Footer />
     </div>
