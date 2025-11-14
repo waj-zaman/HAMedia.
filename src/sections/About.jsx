@@ -69,6 +69,7 @@ const Section = () => {
         </motion.div>
 
         {/* RIGHT GEOMETRIC BOXES */}
+
         {/* RIGHT IMAGE GRID */}
         <motion.div
           className="w-full md:w-2/5 flex justify-center relative"
@@ -109,12 +110,14 @@ const Section = () => {
                 <img
                   src={img.src}
                   alt={img.alt}
+                  loading="lazy"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500 ease-out"
                 />
               </motion.div>
             ))}
           </motion.div>
         </motion.div>
+
 
 
       </div>
