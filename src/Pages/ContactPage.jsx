@@ -38,7 +38,7 @@ const ContactPage = () => {
             <Navbar />
 
             {/* 🟡 Hero Section */}
-            <section className="relative flex flex-col md:flex-row items-center justify-center min-h-[60vh] mt-[60px] px-6 sm:px-10 md:px-20 bg-gradient-to-b from-[#1a1a1a] to-[#000000] overflow-hidden">
+            <section className="relative flex flex-col md:flex-row items-center justify-center min-h-[60vh] mt-[60px] px-6 sm:px-10 md:px-20 bg-gradient-to-b from-[#1a1a1a] to-[#000000] overflow-x-hidden">
                 <div className="absolute inset-0 bg-black/40"></div>
                 <div className="relative z-10 w-full max-w-[1300px] flex flex-col md:flex-row items-center justify-between gap-10">
                     <div className="w-full md:w-1/2 text-center md:text-left">
