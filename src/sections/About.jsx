@@ -1,16 +1,9 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Section = () => {
   const navigate = useNavigate();
-
-  // Subtle, safe animation
-  const fadeUp = {
-    hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0 },
-  };
 
   return (
     <section
@@ -20,14 +13,7 @@ const Section = () => {
       <div className="w-full max-w-[1300px] flex flex-col md:flex-row items-center justify-between px-4 sm:px-10 md:px-20 py-8 md:py-12 gap-12">
 
         {/* LEFT TEXT SECTION */}
-        <motion.div
-          className="w-full md:w-3/5 text-center md:text-left"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.3 }}
-        >
+        <div className="w-full md:w-3/5 text-center md:text-left">
           <p className="body text-sm text-amber-600 font-medium">Know us better</p>
 
           <h2 className="text-xl sm:text-2xl md:text-3xl heading font-bold text-gray-900 mb-6 leading-snug">
@@ -74,60 +60,44 @@ const Section = () => {
           >
             Contact Us <span className="text-xl">➜</span>
           </button>
-        </motion.div>
+        </div>
 
         {/* RIGHT IMAGE GRID */}
-        <motion.div
-          className="w-full md:w-2/5 flex justify-center relative"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.3 }}
-        >
+        <div className="w-full md:w-2/5 flex justify-center relative">
           <div className="grid grid-cols-2 gap-4 sm:gap-6 w-full">
 
             {/* IMAGE 1 */}
-            <motion.div
-              variants={fadeUp}
-              className="overflow-hidden rounded-2xl shadow-md border border-gray-200 h-32 sm:h-40 md:h-44"
-            >
+            <div className="overflow-hidden rounded-2xl shadow-md border border-gray-200 h-32 sm:h-40 md:h-44">
               <img
                 src="/imagery/compressed/pexels-vladbagacian-3987066_11zon.jpg"
                 alt="Web Developer at Work"
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               />
-            </motion.div>
+            </div>
 
             {/* IMAGE 2 */}
-            <motion.div
-              variants={fadeUp}
-              className="overflow-hidden rounded-2xl shadow-md border border-gray-200 h-32 sm:h-40 md:h-44 translate-y-4"
-            >
+            <div className="overflow-hidden rounded-2xl shadow-md border border-gray-200 h-32 sm:h-40 md:h-44 translate-y-4">
               <img
                 src="/imagery/compressed/pexels-olia-danilevich-4974922_11zon.jpg"
                 alt="Photographer Editing"
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               />
-            </motion.div>
+            </div>
 
             {/* IMAGE 3 — WIDE */}
-            <motion.div
-              variants={fadeUp}
-              className="col-span-2 overflow-hidden rounded-2xl shadow-md border border-gray-200 h-40 sm:h-52 md:h-56 mt-4"
-            >
+            <div className="col-span-2 overflow-hidden rounded-2xl shadow-md border border-gray-200 h-40 sm:h-52 md:h-56 mt-4">
               <img
                 src="/imagery/compressed/pexels-fauxels-3183197_11zon.jpg"
                 alt="Creative Team Collaboration"
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               />
-            </motion.div>
+            </div>
 
           </div>
-        </motion.div>
+        </div>
 
       </div>
     </section>
