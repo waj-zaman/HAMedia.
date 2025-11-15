@@ -93,7 +93,7 @@ const Section = () => {
               className="overflow-hidden rounded-2xl shadow-md border border-gray-200 h-32 sm:h-40 md:h-44"
             >
               <img
-                src="/imagery/pexels-vladbagacian-3987066.jpg"
+                src="/imagery/compressed/pexels-vladbagacian-3987066_11zon.jpg"
                 alt="Web Developer at Work"
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
@@ -106,7 +106,7 @@ const Section = () => {
               className="overflow-hidden rounded-2xl shadow-md border border-gray-200 h-32 sm:h-40 md:h-44 translate-y-4"
             >
               <img
-                src="/imagery/pexels-olia-danilevich-4974922.jpg"
+                src="/imagery/compressed/pexels-olia-danilevich-4974922_11zon.jpg"
                 alt="Photographer Editing"
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
@@ -119,7 +119,7 @@ const Section = () => {
               className="col-span-2 overflow-hidden rounded-2xl shadow-md border border-gray-200 h-40 sm:h-52 md:h-56 mt-4"
             >
               <img
-                src="/imagery/pexels-fauxels-3183197.jpg"
+                src="/imagery/compressed/pexels-fauxels-3183197_11zon.jpg"
                 alt="Creative Team Collaboration"
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
