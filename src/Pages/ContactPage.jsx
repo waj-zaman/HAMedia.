@@ -73,7 +73,7 @@ const ContactPage = () => {
                         <img
                             src="/imagery/pexels-nietjuhart-796602.jpg"
                             alt="Portfolio showcase"
-                            className="rounded-2xl w-full sm:w-4/5 md:w-full max-w-[500px] object-cover shadow-lg"
+                            className="rounded-2xl w-full sm:w-4/5 md:w-full max-w-[500px] object-cover shadow-lg mb-10 md:mb-0"
                         />
                     </motion.div>
                 </div>
