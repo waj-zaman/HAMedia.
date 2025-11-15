@@ -4,8 +4,10 @@ import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
   const [videoSrc, setVideoSrc] = useState(
-    "/videos/Untitled Design.mp4"
+    "/videos/2.mp4"
   );
+
+  // 2 For desktop and 1 for mobile
 
   const navigate = useNavigate();
 
@@ -13,8 +15,8 @@ const HeroSection = () => {
     if (typeof window === "undefined") return;
 
     // Define both video versions
-    const mobileVideo = "/videos/Untitled Design (1).mp4";   // 👈 replace with your mobile-optimized video
-    const desktopVideo = "/videos/Untitled Design.mp4";
+    const mobileVideo = "/videos/1.mp4";   // 👈 replace with your mobile-optimized video
+    const desktopVideo = "/videos/2.mp4";
 
     const mq = window.matchMedia("(max-width: 768px)");
 
