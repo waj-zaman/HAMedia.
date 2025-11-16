@@ -33,10 +33,10 @@ const PortfolioSection = () => {
             </motion.div>
 
             {/* Navigation Buttons */}
-            <div className="flex justify-center md:justify-start gap-3 my-8 overflow-x-hidden">
+            <div className="flex justify-center items-center gap-3 my-8 overflow-x-hidden">
                 <button
                     onClick={() => setActiveSection("web")}
-                    className={`px-5 py-2.5 transition-all heading text-xl duration-200 
+                    className={`px-5 py-2.5 transition-all heading text-lg sm:text-xl duration-200 
                     ${activeSection === "web" ? "font-bold text-[#F42F05]" : "text-gray-600"}`}
                 >
                     Web Design
@@ -46,7 +46,7 @@ const PortfolioSection = () => {
 
                 <button
                     onClick={() => setActiveSection("photo")}
-                    className={`px-5 py-2.5 transition-all heading text-xl duration-200 
+                    className={`px-5 py-2.5 transition-all heading text-lg sm:text-xl duration-200 
                     ${activeSection === "photo" ? "font-bold text-[#F42F05]" : "text-gray-600"}`}
                 >
                     Photography
